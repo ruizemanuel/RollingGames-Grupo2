@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="crud de productos  con Vanilla javascript">
+  <meta name="keywords" content="js, javascript, Vanilla JavaScript, CRUD">
+  <meta name="author" content="Abel Cordoba Gonzalez">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Práctica CRUD</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CRUD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container my-5">
+    <section>
+      <h1 class="display-3 text-center">Administrador de productos</h1>
+      <hr />
+      
+      <div class="alert alert-danger my-3 d-none" role="alert" id="mjeAlerta">
+        Debe completar todos los campos rqueridos
+      </div>
+    </section>
+    <section>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btnNuevo" data-bs-target="#exampleModal">
+        Nuevo
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="formProduto">
+                <div class="mb-3">
+                  <label for="codigo" class="form-label">Código</label>
+                  <input type="text" class="form-control" id="codigo" placeholder="1234add" maxlength="10" minlength="1"
+                    readonly required />
+                  <div class="invalid-feedback">
+                    Debe ingresar un código alfanumerico
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="nombreJuego" class="form-label">Nombre del juego</label>
+                  <input type="text" class="form-control" id="nombreJuego" placeholder="ej: Iron Man" maxlength="20" required />
+                </div>
+                <div class="mb-3">
+                  <label for="categoria" class="form-label">Categoria</label>
+                  <select id="categoria" class="form-select">
+                    <option>Accion</option>
+                    <option>Aventura</option>
+                    <option>Deportes</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripcion</label>
+                  <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="URL" class="form-label">URL</label>
+                  <input type="text" class="form-control" id="URL" placeholder="http://imagen.com" maxlength="200" required />
+                </div>
+
+                <div class="form-check form-switch">
+                  <label class="form-check-label" for="publicado">Publicado</label>
+                  <input class="form-check-input" type="checkbox" role="switch" id="publicado">       
+                </div>
+               
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="btnSubmit">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-secondary" id="btnDatosPrueba">
+        Cargar datos de prueba
+      </button>
+      <div class="table-responsive">
+        <table class="table my-5">
+          <thead>
+            <tr>
+              <th scope="col">Cod.</th>
+              <th scope="col">Nombre del Juego</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">URL</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProducto">
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/admin.js" type="module"></script>
+</body>
+
+</html>
