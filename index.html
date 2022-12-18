@@ -1,46 +1,203 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Agregar etiquetas meta -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <title>Práctica CRUD</title>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="página de venta de juegos" />
+    <meta name="keywords" content="css javaScript juegos html" />
+    <meta name="author" content="ezequiel sale" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/slider.css" />
+    <title>Proyecto 2</title>
+  </head>
+  <body class="bg">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">CRUD</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active"  aria-current="page" href="index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link"href="admin.html">Admin</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="posi nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="posi nav-link" href="#">Registro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
+
+    <section class="juegoDestacado">
+      <main class="imagenDestacada">
+        <h1 class="tituloPrincipal text-light">Juego destacado</h1>
+        <div class="contenedor">
+          <figure>
+            <img id="imagenDestacado"
+        
+              alt="assassinsCreedValhala"
+            />
+            <div class="capa">
+              <span class="text-light display-5" id="nombreJuego"></span>
+              <p class="text-light display-7 px-2 descripcion" id="descDestacado">
+                
+              </p>
+              <p class="text-light mx-2" id="catDestacado"></p>
+              <button class="verMas mx-2">Ver Más</button>
+            </div>
+          </figure>
+        </div>
+      </main>
+    </section>
+    
     <main class="container">
       <section class="my-5">
-        <h1 class="display-3 text-center text-primary">
-          Catálogo de productos
-        </h1>
-        <hr>
+        <h6 class="display-6 text-white">
+         Accion
+        </h6>
+        <hr style="color: white;">
         <article class="row" id="grilla">
         </article>
       </section>
     </main>
-    <footer></footer>
+
+    <main class="container">
+      <section class="my-5">
+        <h6 class="display-6 text-white">
+         Disparos
+        </h6>
+        <hr style="color: white;">
+        <article class="row" id="grilla2">
+        </article>
+      </section>
+    </main>
+
+    <main class="container">
+      <section class="my-5">
+        <h6 class="display-6 text-white">
+         Aventura
+        </h6>
+        <hr style="color: white;">
+        <article class="row" id="grilla3">
+        </article>
+      </section>
+    </main>
+
+    <main class="container">
+      <section class="my-5">
+        <h6 class="display-6 text-white">
+         Deportes
+        </h6>
+        <hr style="color: white;">
+        <article class="row" id="grilla4">
+        </article>
+      </section>
+    </main>
+
+    <div class="">
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"
+                ><img src="/img/facebook.png" alt="FacebookIcon" /></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"
+                ><img src="/img/gorjeo.png" alt="TwitterIcon" /></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"
+                ><img src="/img/instagram.png" alt="InstagramIcon" /></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"
+                ><img src="/img/linkedin.png" alt="LinkedinIcon" /></i
+            ></a>
+
+            <!-- Github -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"
+                ><img src="/img/github(1).png" alt="GithubIcon" /></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">Rolling Code</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/app.js"></script>
-</body>
+  </body>
 </html>
