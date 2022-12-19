@@ -47,4 +47,46 @@ const validarGeneral = (
   }
 };
 
-export { validarURL, validarGeneral };
+const validarRegistro = (
+  campoUsuario,
+  campoContrasenia,
+  campoContrasenia2
+) => {
+ 
+  let alerta = document.querySelector("#mjeAlerta");
+  if (
+    campoRequerido(campoUsuario) &&
+    campoRequerido(campoContrasenia) &&
+    campoRequerido(campoContrasenia2)
+  ) {
+    
+    alerta.className = "alert alert-danger mt-4 d-none";
+    return true;
+  } else {
+    
+    alerta.className = "alert alert-danger mt-4";
+    return false;
+  }
+};
+
+const validarLogin = (
+  campoUsuario,
+  campoContrasenia
+) => {
+ 
+  let alerta = document.querySelector("#mjeAlerta");
+  if (
+    campoRequerido(campoUsuario) &&
+    campoRequerido(campoContrasenia)
+  ) {
+    
+    alerta.className = "alert alert-danger mt-4 d-none";
+    return true;
+  } else {
+    
+    alerta.className = "alert alert-danger mt-4";
+    return false;
+  }
+};
+
+export { validarURL, validarGeneral, validarRegistro, validarLogin };

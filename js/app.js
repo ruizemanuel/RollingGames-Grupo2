@@ -34,24 +34,42 @@ let destacado = listaJuegos.find((itemProducto) => {
 let juegosAccion = listaJuegos.filter((juegos) => {
   return juegos.categoria === "Accion";
 });
+let tituloAccion = document.getElementById("accion")
+if(juegosAccion.length == 0){
+  tituloAccion.innerHTML = ""
+}
 juegosAccion.map((item) => { crearColumna(item) });
 
 
 let juegosDisparos = listaJuegos.filter((juegos) => {
   return juegos.categoria === "Disparos";
 });
+let tituloDisparos = document.getElementById("disparos")
+if(juegosDisparos.length == 0){
+  tituloDisparos.innerHTML = ""
+}
 juegosDisparos.map((item) => { crearColumnaDis(item) });
+
 
 
 let juegosAventura = listaJuegos.filter((juegos) => {
   return juegos.categoria === "Aventura";
 });
+let tituloAventura = document.getElementById("aventura")
+if(juegosAventura.length == 0){
+  tituloAventura.innerHTML = ""
+}
 juegosAventura.map((item) => { crearColumnaAven(item) });
+
 
 
 let juegosDeportes = listaJuegos.filter((juegos) => {
   return juegos.categoria === "Deportes";
 });
+let tituloDeportes = document.getElementById("deportes")
+if(juegosDeportes.length == 0){
+  tituloDeportes.innerHTML = ""
+}
 juegosDeportes.map((item) => { crearColumnaDep(item) });
 
 let nombreJuego = document.getElementById("nombreJuego")
