@@ -1,0 +1,12 @@
+.bg {
+    background-repeat: no-repeat;
+    background-size: 300% 340%;
+    background-image: linear-gradient(
+          -45deg, 
+          rgb(0, 0, 0) 0%, 
+          rgb(1, 5, 25) 25%, 
+          rgb(8, 16, 134) 51%, 
+          rgb(3, 6, 178) 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
+  }
