@@ -35,7 +35,9 @@ if(usuarioLogueado.length != 0){
   verificarLogin()
 }
 
-
+function goToDetalles(){
+  location.replace("./detalles.html")
+}
 
 let destacado = listaJuegos.find((itemProducto) => {
   return itemProducto.destacado === true;
