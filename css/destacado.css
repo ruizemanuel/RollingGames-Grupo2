@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: 300% 340%;
+  background-image: linear-gradient(
+    -45deg,
+    rgb(0, 0, 0) 0%,
+    rgb(1, 5, 25) 25%,
+    rgb(8, 16, 134) 51%,
+    rgb(3, 6, 178) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.navbar {
+  position: fixed;
+  width: 100vw;
+}
+.container-fluid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.caratula {
+  margin-top: 75px;
+  width: 450px;
+  height: 550px;
+}
+
+.descripUno {
+    margin-top: 430px;
+}
+
+li {
+  color: #fff;
+}
+
+.descripDos {
+  color: #fff;
+}
+.descripcionDelJuego {
+  width: 75%;
+  margin-left: 15px;
+}
+
+.descrip {
+  color: #fff;
+}
+
+.video {
+  margin-left: 15px;
+}
+
+.compra {
+  display: flex;
+  width: 200px;
+  height: 45px;
+  background-color: #fff;
+  place-items: center;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.precio {
+  margin: auto;
+  
+}
