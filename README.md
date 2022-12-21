@@ -4,7 +4,7 @@
 
 Este proyecto permite agregar, editar, borrar juegos por medio de una página de admin y visualizarlos en una página principal
 
-[ver Repo](https://github.com/abelcg/PracticaCRUD-c14i)
+[ver Repo](https://github.com/ruizemanuel/RollingGames-Grupo2)
 
 ## Librerias externas
 - Bootstrap

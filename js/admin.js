@@ -97,8 +97,8 @@ function crearProducto() {
   guardarLocalStorage();
 
   Swal.fire(
-    "Producto creado!",
-    "Su producto fue creado correctamente",
+    "Juego creado!",
+    "Su juego fue creado correctamente",
     "success"
   );
   //cargar el/los productos en la tabla
@@ -198,7 +198,7 @@ window.prepararEdicionProducto = function (codigo) {
 function modificarProducto() {
   
   Swal.fire({
-    title: "¿Seguro qué desea modificar este producto?",
+    title: "¿Seguro qué desea modificar este juego?",
     text: "Esta acción no podra ser revertida!",
     icon: "warning",
     showCancelButton: true,
@@ -226,8 +226,8 @@ function modificarProducto() {
       cargaInicial();
      
       Swal.fire(
-        "Producto modificado!",
-        "Su producto fue modificado correctamente",
+        "Juego modificado!",
+        "Su juego fue modificado correctamente",
         "success"
       );
      
@@ -244,7 +244,7 @@ function borrarTabla() {
 window.borrarProducto = function (codigo) {
  
   Swal.fire({
-    title: "¿Seguro qué desea borrar este producto?",
+    title: "¿Seguro qué desea borrar este juego?",
     text: "Esta acción no podra ser revertida!",
     icon: "warning",
     showCancelButton: true,
@@ -269,8 +269,8 @@ window.borrarProducto = function (codigo) {
 
       
       Swal.fire(
-        "Producto eliminado!",
-        "Su producto fue eliminado correctamente",
+        "Juego eliminado!",
+        "Su juego fue eliminado correctamente",
         "success"
       );
     }
