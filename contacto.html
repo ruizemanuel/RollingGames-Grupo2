@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        <title>Página de contacto</title>
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("SFzC0PALs3luZR9uq");
+       })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex" id="navbarNavDropdown">
+              <ul class="navbar-nav" id="itemNavbar">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="posi nav-link" id="login" href="./login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="posi nav-link" id="registro" href="./registro.html">Registro</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1 class="tituloContactanos text-white text-center">Contactanos!</h1>
+    <div class="contenedorForm">
+      <div class="formContacto mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-white">Direccion de correo</label>
+        <input type="email" class="form-control" id="correo" placeholder="nombre@gmail.com" minlength="10" maxlength="40" required>
+      </div>
+      <div class="invalid-feedback"></div>
+      <div class="valid-feedback"></div>
+      <div class="formContacto mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text-white">Mensaje</label>
+          <textarea class="form-control" id="areaTexto" rows="5" minlength="15" maxlength="450" required></textarea>
+        </div>
+        <div class="invalid-feedback"></div>
+      <div class="valid-feedback"></div>
+        <button class="btn-enviar btn-primary" onclick="enviarMail()">Enviar</button>
+    </div>
+</div>
+
+
+
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0">
+          <section class="mb-4">
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"
+                ><img src="/img/facebook.png" alt="FacebookIcon" /></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"
+                ><img src="/img/gorjeo.png" alt="TwitterIcon" /></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"
+                ><img src="/img/instagram.png" alt="InstagramIcon" /></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"
+                ><img src="/img/linkedin.png" alt="LinkedinIcon" /></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"
+                ><img src="/img/github(1).png" alt="GithubIcon" /></i
+            ></a>
+          </section>
+        </div>
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">Rolling Code</a>
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/contacto.js"></script>
+</body>
+</html>
