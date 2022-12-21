@@ -1,16 +1,17 @@
-## Práctica CRUD
-### Proyecto de un ABM de productos 
+## Rolling Games
+### Proyecto de un ABM de juegos
 #### Este proyecto fue realizado con Vanilla JS
 
-Este proyecto permite agregar, editar, borrar productos por medio de una página de admin.
+Este proyecto permite agregar, editar, borrar juegos por medio de una página de admin y visualizarlos en una página principal
 
 [ver Repo](https://github.com/abelcg/PracticaCRUD-c14i)
 
 ## Librerias externas
 - Bootstrap
 - SweetAlert2
+- EmailJS
 
 
-### Autor
+### Autores
 
--Abel Córdoba González
+-Federico Soria, Ezequiel Sale, Emanuel Ruiz

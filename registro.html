@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="crud de productos  con Vanilla javascript">
+    <meta name="description" content="crud de juegos  con Vanilla javascript">
     <meta name="keywords" content="js, javascript, Vanilla JavaScript, CRUD">
-    <meta name="author" content="Abel Cordoba Gonzalez">
+    <meta name="author" content="Federico Soria, Ezequiel Sale, Emanuel Ruiz">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("_Dh8QUgAk-H_cjr0m");
+        })();
+    </script>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <title>Registro</title>
 </head>
@@ -31,7 +38,7 @@
 
                 <div class="mb-3">
                     <label for="contrasenia2" class="form-label">Repetir Contraseña</label>
-                    <input type="password" class="form-control" id="contrasenia2" maxlength="15" required> 
+                    <input type="password" class="form-control" id="contrasenia2" maxlength="15" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="btnSubmit">Registrarse</button>

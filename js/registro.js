@@ -31,11 +31,10 @@ function guardarUsuario(e) {
 
     e.preventDefault();
 
-    if (validarRegistro(campoUsuario, campoContrasenia, campoContrasenia2) && campoContrasenia.value === campoContrasenia2.value) 
-    {
+    if (validarRegistro(campoUsuario, campoContrasenia, campoContrasenia2) && campoContrasenia.value === campoContrasenia2.value) {
         crearUsuario();
 
-    } else{
+    } else {
         Swal.fire(
             "Algo salio mal!",
             "Verifica que las claves coincidan",
@@ -57,15 +56,32 @@ function crearUsuario() {
     listaUsuarios.push(usuarioNuevo);
 
 
-    limpiarFormulario();
 
-    guardarLocalStorage();
 
-    Swal.fire(
-        "Usuario creado!",
-        "Su usuario fue creado correctamente",
-        "success"
-    );
+    // Swal.fire(
+    //     "Usuario creado!",
+    //     "Su usuario fue creado correctamente",
+    //     "success"
+    // );
+
+    var templateParams = {
+        user_name: campoUsuario.value,
+        destinatario: "ruiz.e.642@gmail.com"
+    };
+
+    emailjs.send('service_wr59yeh', 'template_21lr24a', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            limpiarFormulario();
+            guardarLocalStorage();
+            location.replace("./login.html")
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+
+
+
+
 
 }
 
@@ -77,9 +93,9 @@ function guardarLocalStorage() {
 function limpiarFormulario() {
 
     formularioUsuario.reset();
-  
+
     campoUsuario.className = "form-control";
     campoContrasenia.className = "form-control";
     campoContrasenia2.className = "form-control";
-    
-  }
+
+}
